@@ -24,6 +24,9 @@ services:
     environment:
       - KAFKA_VERSION
       - RANGER_VERSION
+    volumes:
+      - ./server.properties:/opt/kafka_2.12-2.5.0/config/server.properties
+      - ./server.properties:/opt/kafka/config/server.properties
 
 networks:
   ranger:
